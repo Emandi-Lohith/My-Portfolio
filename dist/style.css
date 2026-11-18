@@ -7,3 +7,9 @@
 @media(pointer:coarse){.cursor,.cursor-light{display:none}.tilt{transform:none!important}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.js-motion .reveal{opacity:1;translate:none;filter:none}.cursor,.cursor-light{display:none}.tilt,.sculpture{transform:none!important}}
 @media(max-width:380px){h1{font-size:clamp(43px,13.2vw,50px)}header{padding:0 12px}nav{gap:12px;font-size:8px;white-space:nowrap}.logo{font-size:28px}.logo>span{font-size:12px;margin-left:3px}.controls{gap:4px}.motion-toggle{padding:7px}.sound-toggle{padding:7px;font-size:7px;min-width:43px}.hero-actions{gap:17px}.hero-actions .button{white-space:nowrap;font-size:9px;padding:13px 15px;gap:10px}.quiet-link{font-size:9px;white-space:nowrap}.quiet-link>span{margin-left:8px}.hero-description{font-size:11px}.hero-eyebrow{font-size:6px;letter-spacing:1px}.liquid-scene{height:340px}.sculpture-core{font-size:90px}.sculpture-core>span{font-size:45px}.project-details{padding:22px 18px}.interest-heading h2{font-size:35px}.closing h2{font-size:43px}}
+/* Liquid splash entrances preserve the original text and glass panel layout. */
+.js-motion .reveal.splash-in{animation:liquid-reveal 1.1s cubic-bezier(.16,.8,.22,1) both;will-change:clip-path,filter,scale;transform-origin:50% 65%}
+@keyframes liquid-reveal{0%{clip-path:ellipse(8% 12% at 50% 65%);filter:blur(12px);scale:.91;opacity:0}28%{opacity:1}55%{clip-path:ellipse(78% 76% at 50% 52%);filter:blur(2px);scale:1.018}100%{clip-path:ellipse(150% 150% at 50% 50%);filter:blur(0);scale:1;opacity:1}}
+.cursor{transition:width .25s,height .25s,margin .25s,background .25s,border-radius .16s;will-change:transform}
+.motion-paused .reveal.splash-in{animation:none!important;clip-path:none;scale:1;filter:none;opacity:1}
+@media(prefers-reduced-motion:reduce){.js-motion .reveal.splash-in{animation:none!important;clip-path:none;scale:1;filter:none;opacity:1}}
