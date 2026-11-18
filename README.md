@@ -1,33 +1,34 @@
-# Lohith's first portfolio
+# Lohith's liquid glass portfolio
 
-A responsive portfolio made with HTML, CSS, and JavaScript. No installation or build is needed.
+A responsive portfolio built with HTML, CSS, and JavaScript. No installation or build is needed.
 
-## Preview your website
+## Preview
 
 1. Open the `dist` folder.
-2. Double-click `index.html`. It will open in your browser.
-3. Try the navigation, scroll through the page, and click **Boost the fans**. Try a narrow browser window to see the phone layout.
+2. Double-click `index.html` to open the website in your browser.
+3. Move your mouse to see the glass cursor and bubble trail. Click to create a bubble splash and soft pop sound. Use the Sound button to mute it and the pause button to stop motion.
+4. Scroll to explore the profile, Agricompare project, and interests. Try narrowing the browser to see the phone layout.
 
-The optional Google Fonts need internet access; system fonts work offline. The project link opens Agricompare in a new tab.
+For a local server, open a terminal in this folder and run `node preview.mjs`, then visit http://127.0.0.1:4173. Stop it with Ctrl+C. Google Fonts need internet; system fonts work offline. Pop sounds are synthesized locally and start only after a click. No audio files or tracking services are used.
 
-## Save your first commit
+## Save a snapshot
 
-A commit saves a snapshot of your files. Open this project folder in VS Code, then choose **Terminal → New Terminal**. Run these lines one at a time:
+This folder already has Git initialized and a first commit saved. After making an edit, open this folder in VS Code, choose **Terminal → New Terminal**, and run:
 
 ```powershell
-git init
 git add .
-git commit -m "Build my first portfolio"
+git commit -m "Personalize my portfolio"
 ```
 
-If Git asks who you are, set your name and your own email address using `git config user.name` and `git config user.email`, then try the commit again. Do not copy someone else's email address.
+See your latest snapshot with `git log --oneline -1`.
 
-To see your snapshot, run `git log --oneline -1`. If the project already has a commit from publishing, you can edit the site and use `git add .` and `git commit -m "Update my portfolio"` for your next snapshot.
+For a completely new copy without Git history, run `git init` before those commands. If Git asks who you are, set `git config user.name` to your name and `git config user.email` to your own email, then try the commit again.
 
-## Make it yours
+## Make a change yourself
 
-- **Words and project link:** edit `dist/index.html`. Search for the sentence you want to change, save, and refresh your browser.
-- **Colors:** edit the `:root` values at the beginning of `dist/style.css`.
-- **Motion and fan button:** edit `dist/script.js`.
+- **Your words and project link:** edit `dist/index.html`, save, and refresh the browser.
+- **Glass colors:** edit `--bg`, `--mint`, and `--violet` at the beginning of `dist/style.css`.
+- **Typing messages:** edit the `phrases` list in `dist/script.js`.
+- **Pop sound volume:** adjust the `.075` gain value inside `popSound` in `dist/script.js`.
 
-The site supports keyboard navigation, visible focus, and reduced motion. The graphics card and Agricompare artwork are original illustrations, not photographs or project screenshots. Only the supplied education, interest, and workshop details are presented as personal facts.
+The site includes keyboard focus, reduced-motion support, a motion pause control, and a sound toggle. Mouse effects adapt to touch devices. Glass artwork and project graphics are original decorative illustrations; the Agricompare visual is not a screenshot. Only the supplied education, interests, and workshop details are used as personal facts.
